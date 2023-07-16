@@ -9,10 +9,11 @@ import AppHeader from './components/AppHeader';
 
 import AddMovieForm from './components/AddMovieForm';
 import FavoriteMovieList from './components/FavoriteMovieList';
+import { useSelector } from "react-redux";
 
 const App = props => {
-  const displayFavorites = true;
-
+  const displayFavorites = useSelector(store => store.favorites.displayFavorites);
+  
   return (
     <div>
       <nav className="bg-zinc-800 px-6 py-3">
